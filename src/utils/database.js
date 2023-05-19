@@ -1,4 +1,6 @@
 const { Sequelize } = require('sequelize');
+require('dotenv').config();
+
 
 const db = new Sequelize({
     host: process.env.DB_HOST,
@@ -10,4 +12,4 @@ const db = new Sequelize({
     dialectOptions: {ssl: {require: true, rejectUnathorized: false}}
 });
 
-module.exports = db;
+module.exports = db; 
