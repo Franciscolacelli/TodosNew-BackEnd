@@ -6,6 +6,7 @@ const userRoutes = require('./routes/users.routes');
 const Categories = require('./models/categories.model');
 const todosRoutes = require('./routes/todos.routes');
 const initModels = require('./models/initModels');
+const cors = require('cors');
 
 
 initModels();
@@ -21,6 +22,7 @@ db.sync()
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 
